@@ -1,0 +1,311 @@
+@import "css3";
+@import "reset";
+@import "z";
+
+.reset();
+
+@font-face {
+  font-family: icon_kawaii;
+  src: url("../fonts/Kawaii%20Food%20Font.ttf");
+  font-weight: normal;
+}
+body{
+  font-family: "Microsoft Yahei", "微软雅黑";
+  .page-wrapper{
+    background: url("../img/main.jpg") fixed;
+    background-size: cover;
+    overflow: hidden;
+    /*--------------------------------header部分--------------------------------------*/
+    header{
+      nav{
+        width: 100%;
+        background: rgba(0,0,0,0.5);
+        position: fixed;
+        z-index: 1000;    //当你定义的CSS中有position属性值为absolute、relative或fixed，用z-index此取值方可生效。此属性参数值越大，则被层叠在最上面。
+        height: 50px;
+        .logo{
+          padding: 10px 20px;
+          font-size: 20px;
+          font-weight: 700;
+          float: left;
+          letter-spacing: 2px;   //字间距离设为2个像素
+          a{
+            color: #ffffff;
+          }
+        }
+        ul{
+          float: right;
+          li{
+            display: inline-block;
+            line-height: 50px;
+            margin-right: 20px;
+            a{
+              line-height: inherit;
+              display: inline-block;
+              height: inherit;
+              color: #ffffff;
+            }
+          }
+        }
+      }
+      #banner{
+        height: 750px;
+        color: #ffffff;
+        background-color: rgba(0,0,0,0.1);
+        .inner{
+          max-width: 300px;
+          text-align: center;
+          margin: 0 auto;
+          position: relative;
+          top: 160px;
+          h1{
+            border-top: 1px solid #ffffff;
+            border-bottom: 1px solid #ffffff;
+            padding: 10px 0;
+          }
+          p{
+            line-height: 30px;
+            margin: 30px;
+          }
+          button{
+            border: none;
+            background-color: #00A3AF;
+            color: #eeeeee;
+            padding: 14px 40px;
+            a{
+              display: block;
+              color: #ffffff;
+            }
+          }
+          .more{
+            margin-top: 300px;
+          }
+        }
+      }
+    }
+    /*--------------------------------article部分------------------------------------*/
+    article{
+      #one{
+        text-align: center;
+        background-color: #56afaa;
+        color: #ffffff;
+        padding: 100px 0;
+        .inner1{
+          max-width: 1080px;
+          margin: 0 auto;
+          .hr{
+            width: 100%;
+            height: 2px;
+            margin: 20px auto;
+            background-color: #00A3AF;
+          }
+          .sub-heading{
+            font-size: 18px;
+            margin: 30px;
+          }
+          .icons{
+            margin-top: 20px;
+            font-size: 70px;
+            font-family: icon_kawaii;
+            .icon{
+              display: inline-block;
+              width: 80px;
+              height: 80px;
+              margin: 20px;
+              border: 1px solid #ffffff;
+              transform: rotate(45deg );     //css3新属性，旋转45度
+            }
+          }
+        }
+      }
+      #two{
+        .article-preview{
+          background-color: rgba(20, 22, 22, 0.83);
+          display: flex;
+          .img-section{
+            width: 45%;
+            img{
+              width: 100%;
+              max-height: 400px;
+              display: block;
+              overflow: hidden;
+            }
+          }
+          .text-section{
+            width: 55%;
+            position: relative;
+            top: 68px;
+            padding: 0 50px;
+            color: #ffffff;
+            h2{
+              margin-bottom: 20px;
+            }
+            .sub-heading{
+              font-size: 20px;
+              margin-bottom: 20px;
+            }
+            p{
+              font-size: 18px;
+            }
+          }
+        }
+        .article-preview:nth-child(odd){
+          background-color: rgba(26, 26, 26, 0.93);   //css3奇偶选择器，当所在部分为奇数时，背景颜色改变
+        }
+      }
+      #three{
+        background-color: rebeccapurple;
+        color: #ffffff;
+        padding: 80px;
+        .inner3{
+          max-width: 960px;
+          margin: 0 auto;
+          .heading-wrapper{
+            text-align: center;
+            h2{
+              letter-spacing: 5px;
+            }
+            .hr{
+              width: 60%;
+              height: 2px;
+              margin: 20px auto;
+              background-color: #523587;
+            }
+            .sub-heading{
+              margin-bottom: 20px;
+            }
+          }
+          .cards{
+            .card{
+              width: 50%;
+              min-height: 300px;
+              padding: 60px;
+              float: left;
+              display: inline-block;
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box;
+              h3{
+                font-size: 24px;
+                padding-bottom: 10px;
+              }
+              p{
+                font-size: 18px;
+                letter-spacing: 1px;
+              }
+            }
+            .card:first-child{
+              background-color: rgba(0,0,0,0.05);    //透明度为0.05的黑色
+            }
+            .card:nth-child(2){
+              background-color: rgba(0,0,0,0.08);
+            }
+            .card:nth-child(3){
+              background-color: rgba(0,0,0,0.11);
+            }
+            .card:nth-child(4){
+              background-color: rgba(0,0,0,0.14);
+            }
+            .card:nth-child(5){
+              background-color: rgba(0,0,0,0.17);
+            }
+            .card:nth-child(6){
+              background-color: rgba(0,0,0,0.20);
+            }
+          }
+          .cards:after{
+            content:'';
+            display: block;
+            clear: both;
+          }
+        }
+      }
+    }
+    /*--------------------------------footer部分-------------------------------------*/
+    footer{
+      color: #ffffff;
+      min-height: 200px;
+      text-align: center;
+      .share{
+        display: block;
+        margin: 0 auto;
+        padding: 50px;
+        li{
+          display: inline-block;
+          padding: 15px;
+          a{
+            color: #ffffff;
+          }
+        }
+      }
+      .copyright{
+        padding-bottom: 20px;
+      }
+    }
+  }
+    /*---------------------------------隐藏部分-----------------------------------------*/
+  .mask{
+    position: fixed;
+    display: none;
+    background-color: rgba(0,0,0,0.4);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  #menu{
+    width: 300px;
+    padding: 20px 0;
+    position: fixed;
+    top: 50px;
+    bottom: 0;
+    right: -300px;
+    background-color: rgba(0,0,0,0.5);
+    color: #ffffff;
+    transition: right 0.5s;    //给侧栏加动画，延迟0.5s
+    ul{
+      li{
+        a{
+          width: 100%;
+          padding: 10px 30px;
+          color: #ffffff;
+          display: inline-block;
+        }
+        a:hover{
+          background-color: #444444;
+        }
+      }
+    }
+  }
+
+  #info{
+    width: 400px;
+    position: fixed;
+    top: 410px;
+    left: 37%;
+    display: none;
+    border-radius: 15px;
+    background-color: rgba(255,255,255,0.5);
+    ul{
+      padding: 20px 35px;
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+
+  .back-to-top{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px;
+    border: 1px solid #888;
+    background-color: #5d5d5d;
+    a{
+      color: #878787;
+    }
+    a:hover{
+      color: #aaaaaa;
+    }
+  }
+}
