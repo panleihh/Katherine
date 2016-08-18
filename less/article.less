@@ -1,0 +1,88 @@
+@import "css3";
+@import "reset";
+@import "z";
+
+.reset();
+
+body{
+  font-family: "Microsoft Yahei", "微软雅黑";
+  .page-wrapper{
+    background: url("../img/main.jpg") fixed;
+    background-size: cover;
+    overflow: hidden;
+    /*--------------------------------header部分--------------------------------------*/
+    header{
+      #banner{
+        height: 300px;
+        color: #ffffff;
+        .inner{
+          max-width: 400px;
+          text-align: center;
+          margin: 0 auto;
+          position: relative;
+          top: 100px;
+          h1{
+            border-top: 1px solid #ffffff;
+            border-bottom: 1px solid #ffffff;
+            padding: 10px 0;
+          }
+          p{
+            line-height: 30px;
+            margin: 30px;
+          }
+          button{
+            border: none;
+            background-color: #00A3AF;
+            color: #eeeeee;
+            padding: 14px 40px;
+          }
+          .more{
+            margin-top: 300px;
+          }
+        }
+      }
+    }
+    /*--------------------------------article部分------------------------------------*/
+    article {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      background-color: rgba(255,255,255,0.4);
+      .content{
+        padding: 40px;
+        p{
+          line-height: 30px;
+        }
+      }
+    }
+    /*--------------------------------footer部分-------------------------------------*/
+    footer{
+      color: #ffffff;
+      min-height: 200px;
+      text-align: center;
+      .share{
+        display: block;
+        margin: 0 auto;
+        padding: 50px;
+        li{
+          display: inline-block;
+          padding: 15px;
+          a{
+            color: #ffffff;
+          }
+        }
+      }
+      .copyright{
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  .back-to-top{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px;
+    border: 1px solid #888;
+  }
+}
